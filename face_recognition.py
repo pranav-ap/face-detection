@@ -23,7 +23,7 @@ def detect(gray, frame):
 
         # region of interest where we try to find eyes
         # [rows : cols]
-        roi_gray = gray[y: y + h, x: x + width]
+        roi_gray = gray[y: y + height, x: x + width]
         roi_color = frame[y: y + height, x: x + width]
         
         eyes = eye_cascade.detectMultiScale(roi_gray, 1.1, 3)
